@@ -1,4 +1,9 @@
 # Khai's first `Gtk::Builder` project
+[![Build Status](https://travis-ci.org/khai-learn-cpp/my-first-glade-project.svg?branch=master)](https://travis-ci.org/khai-learn-cpp/my-first-glade-project)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![dependencies status](https://david-dm.org/khai-learn-cpp/my-first-glade-project.svg)](https://david-dm.org/khai-learn-cpp/my-first-glade-project#info=dependencies)
+[![devDependencies status](https://david-dm.org/khai-learn-cpp/my-first-glade-project/dev-status.svg)](https://david-dm.org/khai-learn-cpp/my-first-glade-project#info=devDependencies)
+[![license](https://img.shields.io/npm/l/promise-set.svg)](http://spdx.org/licenses/MIT)
 
 ## Prerequisites
 
