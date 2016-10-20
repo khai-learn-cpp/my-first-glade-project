@@ -4,6 +4,15 @@ language: node_js
 node_js:
   - '6'
 
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      packages:
+        - g++-6
+        - libgtkmm-3.0-1v5
+        - libgtkmm-3.0-dev
+
 before_script:
   - chmod -R +x sh
   - export CXX=g++-6
@@ -12,15 +21,6 @@ before_script:
 
 before_deploy:
   - source ./sh/deploy/before.sh
-
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-6
-      - libgtkmm-3.0-1v5
-      - libgtkmm-3.0-dev
 
 deploy:
   provider: releases
