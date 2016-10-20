@@ -8,10 +8,10 @@ addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
-      packages:
-        - g++-6
-        - libgtkmm-3.0-1v5
-        - libgtkmm-3.0-dev
+    packages:
+      - g++-6
+      - libgtkmm-3.0-1v5
+      - libgtkmm-3.0-dev
 
 before_script:
   - chmod -R +x sh
