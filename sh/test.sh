@@ -11,7 +11,7 @@
 ) && (
   npm run build
 ) && (
-  [ "$SKIP_QUICK_TEST" != 'TRUE' ] || (
+  [[ "$SKIP_QUICK_TEST" == 'TRUE' ]] || (
     echo 'Launching product...'
     echo 'Set SKIP_QUICK_TEST to TRUE to skip this step.' >&2
     npm start
