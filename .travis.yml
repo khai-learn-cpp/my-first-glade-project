@@ -4,14 +4,10 @@ language: node_js
 node_js:
   - '6'
 
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-6
-      - libgtkmm-3.0-1v5
-      - libgtkmm-3.0-dev
+sudo: required
+
+before_install:
+  - sudo bash sh/ci/before-install.sh
 
 before_script:
   - chmod -R +x sh
