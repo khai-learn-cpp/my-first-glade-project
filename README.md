@@ -8,7 +8,9 @@
 
 * Bash (Shell)
 
-## Building
+* NodeJS and npm
+
+## Development
 
 ### Environment variables
 
@@ -16,19 +18,24 @@
 
 * `PKG_CONFIG_PATH`: Read GTK+'s docs for more information
 
-### Command line
+* `SKIP_QUICK_TEST` (optional): Either be `TRUE` or `FALSE`
 
-**Build**
+### Test
 
 ```bash
-cd repo-root
-sh build
+npm test
 ```
 
-**Run**
+### Build
 
 ```bash
-repo-root/main
+npm run build
+```
+
+### Run
+
+```bash
+npm start
 ```
 
 ## License
