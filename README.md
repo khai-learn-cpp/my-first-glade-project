@@ -1,4 +1,4 @@
-# Khai's first Gtk::Builder project
+# Khai's first `Gtk::Builder` project
 
 ## Prerequisites
 
