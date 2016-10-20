@@ -8,6 +8,7 @@ before_script:
   - chmod -R +x sh
   - export CXX=g++-6
   - export SKIP_QUICK_TEST=TRUE
+  - export PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/local/lib/pkgconfig
 
 before_deploy:
   - source ./sh/deploy/before.sh
@@ -18,7 +19,8 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-6
-      - gtkmm-3.0
+      - libgtkmm-3.0-1v5
+      - libgtkmm-3.0-dev
 
 deploy:
   provider: releases
