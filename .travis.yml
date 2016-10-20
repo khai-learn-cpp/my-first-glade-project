@@ -6,9 +6,19 @@ node_js:
 
 before_script:
   - chmod -R +x sh
+  - export CXX=g++-6
+  - export SKIP_QUICK_TEST=TRUE
 
 before_deploy:
   - source ./sh/deploy/before.sh
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-6
+      - gtkmm-3.0
 
 deploy:
   provider: releases
