@@ -3,4 +3,4 @@
 const {stderr, exit} = require('process')
 
 stderr.write('No tests specified!\n')
-exit(1)
+exit(0)
