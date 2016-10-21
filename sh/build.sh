@@ -8,8 +8,9 @@
     libversion=$(pkg-config --modversion gtkmm-3.0) || exit $?
     echo Using GTKmm version $libversion
     libflags=$(pkg-config gtkmm-3.0 --cflags --libs) || exit $?
+    overrideflags='-std=c++14 -Wall -Wextra -o main'
     echo 'Building...'
-    $CXX -std=c++14 -Wall -Wextra -o main main.cpp $libflags
+    $CXX main.cpp $libflags $overrideflags
   ) && (
     echo 'done.'
   ) || (

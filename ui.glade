@@ -3,26 +3,59 @@
 <interface>
   <requires lib="gtk+" version="3.12"/>
   <object class="GtkWindow" id="main-window">
-    <property name="name">main</property>
+    <property name="name">main-window</property>
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Greeting!</property>
     <property name="icon_name">applications-office</property>
+    <signal name="destroy" handler="gtk_main_quit" swapped="no"/>
     <child>
-      <object class="GtkLabel" id="hello-world">
+      <object class="GtkBox" id="contents">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="xpad">13</property>
-        <property name="ypad">15</property>
-        <property name="label" translatable="yes">Hello, World!!</property>
-        <property name="width_chars">25</property>
-        <property name="xalign">0.49000000953674316</property>
-        <attributes>
-          <attribute name="font-desc" value="Segoe UI 10"/>
-        </attributes>
-        <child internal-child="accessible">
-          <object class="AtkObject" id="hello-world-atkobject">
-            <property name="AtkObject::accessible-name" translatable="yes">main-window</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkLabel" id="hello-world">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">start</property>
+            <property name="valign">start</property>
+            <property name="xpad">13</property>
+            <property name="ypad">15</property>
+            <property name="label" translatable="yes">Hello, World!!</property>
+            <property name="width_chars">25</property>
+            <property name="xalign">0.49000000953674316</property>
+            <attributes>
+              <attribute name="font-desc" value="Segoe UI 10"/>
+            </attributes>
+            <child internal-child="accessible">
+              <object class="AtkObject" id="hello-world-atkobject">
+                <property name="AtkObject::accessible-name" translatable="yes">main-window</property>
+              </object>
+            </child>
           </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="close-button">
+            <property name="label" translatable="yes">Close</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="resize_mode">immediate</property>
+            <property name="relief">none</property>
+            <property name="xalign">0.4699999988079071</property>
+            <property name="image_position">right</property>
+            <signal name="clicked" handler="gtk_widget_destroy" object="main-window" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
         </child>
       </object>
     </child>
